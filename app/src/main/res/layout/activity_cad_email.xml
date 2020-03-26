@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_degrade"
+    tools:context=".activity.EntrarActivity">
+
+    <ImageView
+        android:id="@+id/imgLogoCadEmail"
+        android:layout_width="300dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/login_ico"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <EditText
+        android:id="@+id/txtCadNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:fontFamily="@font/hero_regular"
+        android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+        android:drawableTint="@color/colorPrimary"
+        android:drawablePadding="8dp"
+        android:background="@drawable/edit_text_custom"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent" />
+
+    <EditText
+        android:id="@+id/txtCadEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:ems="10"
+        android:hint="Email"
+        android:fontFamily="@font/hero_regular"
+        android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+        android:drawableTint="@color/colorPrimary"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_custom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent" />
+
+    <EditText
+        android:id="@+id/txtCadSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:fontFamily="@font/hero_regular"
+        android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+        android:drawableTint="@color/colorPrimary"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_custom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="textPassword"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent" />
+
+    <com.flod.loadingbutton.LoadingButton
+        android:id="@+id/btnCadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textInfo"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="75dp"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:gravity="center"
+        android:drawablePadding="10dp"
+        android:text="CADASTRAR"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:fontFamily="@font/hero_bold"
+        android:background="@drawable/button_transp_round"
+        app:endCompleteDrawable="@drawable/ic_successful"
+        app:endFailDrawable="@drawable/ic_fail"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgFundoMontanha1CadEmail"
+            android:layout_width="274dp"
+            android:layout_height="188dp"
+            android:layout_gravity=""
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgFundoSolCadEmail"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/fundo_montanha1" />
+
+        <ImageView
+            android:id="@+id/imgFundoSolCadEmail"
+            android:layout_width="52dp"
+            android:layout_height="51dp"
+            android:layout_gravity=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.145"
+            app:srcCompat="@drawable/fundo_sol" />
+
+
+        <ImageView
+            android:id="@+id/imgFundoNuvem1CadEmail"
+            android:layout_width="109dp"
+            android:layout_height="69dp"
+            android:layout_gravity=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.364"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.159"
+            app:srcCompat="@drawable/fundo_nuvem1" />
+
+        <ImageView
+            android:id="@+id/imgFundoNuvem2CadEmail"
+            android:layout_width="103dp"
+            android:layout_height="66dp"
+            android:layout_gravity=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.642"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.097"
+            app:srcCompat="@drawable/fundo_nuvem1" />
+
+        <ImageView
+            android:id="@+id/imgFundoBarraca2CadEmail"
+            android:layout_width="245dp"
+            android:layout_height="84dp"
+            android:layout_gravity=""
+            android:layout_marginTop="36dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.959"
+            app:layout_constraintStart_toEndOf="@+id/imgFundoBarraca1CadEmail"
+            app:layout_constraintTop_toBottomOf="@+id/imgFundoNuvem2CadEmail"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/fundo_barraca2" />
+
+        <ImageView
+            android:id="@+id/imgFundoBarraca1CadEmail"
+            android:layout_width="195dp"
+            android:layout_height="104dp"
+            android:layout_gravity=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.546"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgFundoNuvem1CadEmail"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/fundo_barraca1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

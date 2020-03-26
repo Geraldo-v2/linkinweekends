@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_degrade"
+    tools:context=".activity.LocalActivity">
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselLocal"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"/>
+
+    <LinearLayout
+        android:id="@+id/Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.like.LikeButton
+            android:layout_marginTop="7dp"
+            app:icon_type="star"
+            app:icon_size="43dp"
+            android:id="@+id/btnFavoritoLocal"
+            android:layout_width="60dp"
+            android:layout_marginLeft="18dp"
+            android:layout_height="45dp"/>
+
+        <ImageButton
+            android:id="@+id/btnNotaLocal"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@color/TranspTotal"
+            app:srcCompat="@mipmap/ic_nota" />
+
+        <ImageButton
+            android:id="@+id/btnMapsLocal"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@color/TranspTotal"
+            app:srcCompat="@mipmap/ic_maps" />
+
+        <ImageButton
+            android:id="@+id/btnDownloadLocal"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@color/TranspTotal"
+            app:srcCompat="@mipmap/ic_download" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnSobre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_transp_quad"
+            android:text="Sobre"
+            android:textAlignment="center"
+            android:fontFamily="@font/hero_regular"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnAtividades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:text="Atividades"
+            android:fontFamily="@font/hero_regular"
+            android:background="@drawable/button_transp_quad"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnHorarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="Horários"
+            android:fontFamily="@font/hero_regular"
+            android:background="@drawable/button_transp_quad"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btnComentarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:text="Comentários"
+            android:fontFamily="@font/hero_regular"
+            android:background="@drawable/button_transp_quad"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnCusto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="Custos"
+            android:fontFamily="@font/hero_regular"
+            android:background="@drawable/button_transp_quad"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btnMaisInformacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:text="Mais Informações"
+            android:fontFamily="@font/hero_regular"
+            android:background="@drawable/button_transp_quad"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</LinearLayout>

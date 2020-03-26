@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_degrade"
+    tools:context=".activity.LocalActivity">
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselAtividade"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"/>
+
+    <LinearLayout
+        android:id="@+id/Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnNotaAtividade"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="8dp"
+            android:background="@color/TranspTotal"
+            app:srcCompat="@mipmap/ic_nota" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnSobreAtividade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_transp_quad"
+            android:text="Sobre"
+            android:fontFamily="@font/hero_regular"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp" />
+        <Button
+            android:id="@+id/btnHorariosAtividade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:text="Horários"
+            android:fontFamily="@font/hero_regular"
+            android:background="@drawable/button_transp_quad"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCustoAtividade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="Custos"
+            android:fontFamily="@font/hero_regular"
+            android:background="@drawable/button_transp_quad"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="15sp"/>
+        <Button
+            android:id="@+id/btnComentariosAtividade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:text="Comentários"
+            android:fontFamily="@font/hero_regular"
+            android:background="@drawable/button_transp_quad"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</LinearLayout>

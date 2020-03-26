@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Linkin Weekends</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_cadastro_local">Locais Cadastrados</string>
+    <string name="facebook_app_id">202385321194633</string>
+    <string name="fb_login_protocol_scheme">fb202385321194633</string>
+
+
+    <string-array name="estados">
+        <item>SP</item>
+    </string-array>
+    <string-array name="regioesSP">
+        <item>DDD15</item>
+    </string-array>
+    <string-array name="ddd15">
+        <item>Alambari</item>
+        <item>Angatuba</item>
+        <item>Apiai</item>
+        <item>Aracoiaba Da Serra</item>
+        <item>Barão De Antonina</item>
+        <item>Barra Do Chapeu</item>
+        <item>Barra Do Turvo</item>
+        <item>Boituva</item>
+        <item>Bom Sucesso De Itarare</item>
+        <item>Buri</item>
+        <item>Campina Do Monte Alegre</item>
+        <item>Capão Bonito</item>
+        <item>Capela Do Alto</item>
+        <item>Cerquilho</item>
+        <item>Cesario Lange</item>
+        <item>Guapiara</item>
+        <item>Guarei</item>
+        <item>Ibiuna</item>
+        <item>Ipero</item>
+        <item>Iporanga</item>
+        <item>Itabera</item>
+        <item>Itáoca</item>
+        <item>Itapetininga</item>
+        <item>Itapeva</item>
+        <item>Itapirapua Paulista</item>
+        <item>Itaporanga</item>
+        <item>Itarare</item>
+        <item>Jumirim</item>
+        <item>Laranjal Paulista</item>
+        <item>Nova Campina</item>
+        <item>Piedade</item>
+        <item>Pilar Do Sul</item>
+        <item>Porangaba</item>
+        <item>Porto Feliz</item>
+        <item>Quadra</item>
+        <item>Ribeira</item>
+        <item>Ribeirão Branco</item>
+        <item>Ribeirão Grande</item>
+        <item>Riversul</item>
+        <item>Salto De Pirapora</item>
+        <item>São Miguel Arcanjo</item>
+        <item>Sarapui</item>
+        <item>Sorocaba</item>
+        <item>Tapirai</item>
+        <item>Taquarivai</item>
+        <item>Tatui</item>
+        <item>Tiete</item>
+        <item>Torre De Pedra</item>
+        <item>Votorantim</item>
+    </string-array>
+
+    <string-array name="categorias">
+        <item>Terra</item>
+        <item>Agua</item>
+        <item>Ar</item>
+    </string-array>
+    <string-array name="dificuldades">
+        <item>Fácil</item>
+        <item>Médio</item>
+        <item>Difícil</item>
+        <item>Fácil e Médio</item>
+        <item>Fácil e Difícil</item>
+        <item>Médio e Difícil</item>
+        <item>Fácil, Médio e Difícil</item>
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

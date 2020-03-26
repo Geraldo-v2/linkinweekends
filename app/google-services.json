@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "663774870202",
+    "firebase_url": "https://lwdatabase.firebaseio.com",
+    "project_id": "lwdatabase",
+    "storage_bucket": "lwdatabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663774870202:android:63473fc0e46f7efe",
+        "android_client_info": {
+          "package_name": "com.lwteam.linkinweekends"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663774870202-ghee4qrv9aior2vr0rfubn4h7p1kcgut.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lwteam.linkinweekends",
+            "certificate_hash": "02a3833431f1c91aa4149bfa386d975c4b1859da"
+          }
+        },
+        {
+          "client_id": "663774870202-g0pgtb41658juj3s5viu9vmrd7omqgkr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnRw3urkvWyqE3oA56dRt57a25UyJV3iQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663774870202-g0pgtb41658juj3s5viu9vmrd7omqgkr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
