@@ -1,33 +1,24 @@
 package com.lwteam.linkinweekends.activity;
 
-import android.app.DownloadManager;
+
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.bumptech.glide.request.RequestOptions;
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -40,26 +31,17 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FacebookAuthCredential;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.database.core.Tag;
 import com.lwteam.linkinweekends.R;
+import com.lwteam.linkinweekends.data.dao.TarefasDao;
 import com.lwteam.linkinweekends.helper.ConfiguracaoFirebase;
-import com.lwteam.linkinweekends.helper.UsuarioFirebase;
 import com.lwteam.linkinweekends.model.Usuario;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
+import com.lwteam.linkinweekends.ui.activity.NotificacaoActivity;
+import com.lwteam.linkinweekends.ui.adapter.TarefaAdapter;
 import java.util.Arrays;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class InicioActivity extends AppCompatActivity {
 
@@ -88,6 +70,8 @@ public class InicioActivity extends AppCompatActivity {
 
         inicializarComponentes();
         verificarUsuarioLogado();
+        onNewIntent(getIntent());
+
         //Processo para autenticação com o Google
         autenticacao=FirebaseAuth.getInstance();
         SignInButton btGoogle = findViewById(R.id.btnContGoogle);
@@ -103,8 +87,27 @@ public class InicioActivity extends AppCompatActivity {
             public void onClick(View v) {
                 signIn();
             }
+
+
         });
+
     }
+    ////pega notificação com app fechado
+    @Override
+    public void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Bundle extras = intent.getExtras();
+        String descricao;
+        if (extras != null) {
+            if (extras.containsKey("mensagem")) {
+                 descricao = extras.getString("mensagem");
+                TarefasDao dao = new TarefasDao();
+                dao.criarTarefa(descricao);
+            }
+        }
+    }
+
+
 
     private void inicializarComponentes() {
 
