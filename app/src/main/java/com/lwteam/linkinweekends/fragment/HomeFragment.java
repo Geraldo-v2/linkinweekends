@@ -24,12 +24,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.lwteam.linkinweekends.R;
 
 import com.lwteam.linkinweekends.activity.LocalActivity;
 import com.lwteam.linkinweekends.activity.MeusLocaisActivity;
+
+import com.lwteam.linkinweekends.ui.activity.NotificacaoActivity;
 import com.lwteam.linkinweekends.activity.PerfilActivity;
 import com.lwteam.linkinweekends.adapter.AdapterLocais;
 import com.lwteam.linkinweekends.helper.ConfiguracaoFirebase;
@@ -102,7 +103,7 @@ public class HomeFragment extends Fragment{
             public void onClick(View v) {
                 final Dialog OpcoesDialog;
                 ImageView btFecharDialogOpcoes;
-                Button btCadastroLocalDialog,btPerfilDialog,btSugerirLocalDialog;
+                Button btCadastroLocalDialog,btPerfilDialog,btSugerirLocalDialog,btNotificacaoDialog;
                 OpcoesDialog = new Dialog(getActivity());
 
                 //CONECTA COM OS BOTOES DO FRONT
@@ -111,6 +112,7 @@ public class HomeFragment extends Fragment{
                 btCadastroLocalDialog=OpcoesDialog.findViewById(R.id.btnCadLocalDialog);
                 btPerfilDialog=OpcoesDialog.findViewById(R.id.btnPerfilDialog);
                 btSugerirLocalDialog=OpcoesDialog.findViewById(R.id.btnSugerirLocalDialog);
+                btNotificacaoDialog=OpcoesDialog.findViewById(R.id.btnNotificacao);
 
                 //BOTAO DE CADASTRAR LOCAL - SOMENTE POR AGORA
                 btCadastroLocalDialog.setOnClickListener(new View.OnClickListener() {
@@ -147,6 +149,16 @@ public class HomeFragment extends Fragment{
                         } catch (android.content.ActivityNotFoundException ex) {
                             Toast.makeText(getActivity(), "Você não tem um aplicativo de email cadastrado .", Toast.LENGTH_SHORT).show();
                         }
+                    }
+                });
+                //PARA NOTIFICAÇÕES
+                btNotificacaoDialog.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent it = new Intent(getActivity(), NotificacaoActivity.class);
+                        startActivity(it);
+                        OpcoesDialog.dismiss();
+
                     }
                 });
                 //O "X" QUE FECHA A TELA

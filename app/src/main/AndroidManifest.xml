@@ -11,6 +11,7 @@
         android:name="com.google.android.geo.API_KEY"
         android:value="@string/google_maps_key" />
     <application
+        android:name=".activity.MinhaNotificacaoActivity"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,26 +22,43 @@
             android:name=".activity.ComentariosActivity"
             android:theme="@style/AppTheme.NoActionBar"
         />
+
         <activity
             android:name=".activity.EditarPerfilActivity"
             android:parentActivityName=".activity.PerfilActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".activity.PerfilActivity"
             android:parentActivityName=".activity.MenuActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.InicioActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="fullSensor"
+            android:taskAffinity="com.lwteam.linkinweekends.activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
+        <activity
+            android:name=".ui.activity.NotificacaoActivity"
+            android:label="Notificações"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.APP_MESSAGING"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="com.lwteam.linkinweekends.ui.activity"
+                    android:scheme="descricao"/>
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".activity.FormularioCadLocalActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".activity.MeusLocaisActivity"
             android:label="@string/title_activity_cadastro_local"
@@ -48,31 +66,32 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.CadEmailActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".activity.EntrarActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".activity.LocalActivity"
             android:parentActivityName=".activity.MenuActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".activity.AtividadeActivity"
             android:parentActivityName=".activity.LocalActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".activity.ListaAtividadesActivity"
             android:parentActivityName=".activity.LocalActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".activity.FormularioCadAtvActivity"
             android:parentActivityName=".activity.MenuActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".activity.MenuActivity"
             android:label="LW"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.NoActionBar" />
+
 
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -87,9 +106,26 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+
+
+        <service android:name=".firebase.MeuFirebaseMensagemService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".receiver.GlobalReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="com.lwteam.linkinweekends.firebase.acao.start"/>
+            </intent-filter>
+        </receiver>
+
         <meta-data android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"/>
 
     </application>
+
+
 
 </manifest>

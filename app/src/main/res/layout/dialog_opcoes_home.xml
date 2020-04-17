@@ -83,6 +83,17 @@
                         android:fontFamily="@font/hero_regular"
                         android:text="Sugerir Locais" />
                     <Button
+                    android:layout_marginTop="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/button_transp_quad"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/hero_regular"
+                    android:text="Ajuda" />
+                    <Button
+                        android:id="@+id/btnNotificacao"
                         android:layout_marginTop="2dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -91,7 +102,7 @@
                         android:background="@drawable/button_transp_quad"
                         android:textColor="@color/colorWhite"
                         android:fontFamily="@font/hero_regular"
-                        android:text="Ajuda" />
+                        android:text="Notificações" />
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>
